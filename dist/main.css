@@ -1,0 +1,75 @@
+body {
+	overflow: hidden;
+	margin: 0;
+	-webkit-user-select: none;
+	user-select: none;
+}
+body[data-mode='game'] .marker-target {
+	display: block;
+}
+
+#three-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.marker-target {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 22px;
+	height: 22px;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+}
+.marker-target::before {
+	position: absolute;
+	left: 10px;
+	width: 2px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+}
+.marker-target::after {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+}
+
+.no-touchevents .controller-mobile {
+	display: none;
+}
+.controller-mobile {
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	width: 151px;
+	height: 151px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.controller-mobile::before {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 131px;
+	height: 131px;
+	border: 1px solid white;
+	border-radius: 50%;
+	content: '';
+}
+.controller-mobile-bar {
+	position: absolute;
+	top: 10px;
+	left: 75px;
+	width: 1px;
+	height: 66px;
+	background-color: white;
+	transform-origin: bottom;
+}
